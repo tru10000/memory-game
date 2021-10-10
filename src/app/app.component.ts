@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   moveCount: number = 0;
 
   ngOnInit() {
+    this.pairCount = sourceCards.length > 12 ? 12 : sourceCards.length;
     this.prepCards();
   }
 
@@ -68,6 +69,10 @@ export class AppComponent implements OnInit {
     this.selectedCards[1].visibility = value;
   }
 
+  gameIsSolved() {
+    return this.pairCount === this.solvedCount;
+  }
+
   matchedHandler() {
     this.solvedCount++;
     this.setStateSelectedCards(CardState.success);
@@ -76,6 +81,9 @@ export class AppComponent implements OnInit {
       this.setVisibilitySelectedCards(CardVisibility.hidden);
       this.setAnimateSelectedCards('animate__fadeIn animate__fast');
       this.clearSelectedCards();
+      if (this.gameIsSolved()) {
+        this.scrollToTop();
+      }
     }, 1600);
   }
 
@@ -120,5 +128,16 @@ export class AppComponent implements OnInit {
     this.moveCount = 0;
     this.prepCards();
   }
-  
+
+  scrollToTop() { 
+    (function smoothscroll() 
+    { var currentScroll = document.documentElement.scrollTop || document.body.scrollTop; 
+      if (currentScroll > 0) 
+      {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, currentScroll - (currentScroll / 5));
+      }
+    })();
+  }
+
 }

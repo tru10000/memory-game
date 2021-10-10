@@ -5,7 +5,7 @@
 
     <p class='instructions' *ngIf='pairCount !== solvedCount'>Click cards below to reveal its value. You can only open two at a time. Find all matching cards to win!</p>
     <p class='instructions' *ngIf='pairCount !== solvedCount'>So far you've tried <strong>{{moveCount}}</strong> pairs of cards.</p>
-    <p class='instructions' *ngIf='pairCount === solvedCount'>Congratulations! You've solved the puzzle in {{moveCount}} moves. <button (click)="resetGame()" class='btn' type='button'><span>Play again</span></button></p>
+    <p class='instructions' *ngIf='gameIsSolved()'>Congratulations! You've solved the puzzle in {{moveCount}} moves. <button (click)="resetGame()" class='btn' type='button'><span>Play again</span></button></p>
   </header>
   
   <div class="card-container">
@@ -13,9 +13,9 @@
   </div>
 
   <footer>
-      Wintery Sunburst background by <a href="https://www.svgbackgrounds.com/" class='attribution'>SVGBackgrounds</a>. 
+    Wintery Sunburst background by <a href="https://www.svgbackgrounds.com/" class='attribution'>SVGBackgrounds</a>. Photos courtesy of <a href="https://www.pexels.com/">Pexels</a>. 
   </footer>
-
+  
 </div>
 
 <router-outlet></router-outlet>

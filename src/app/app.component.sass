@@ -32,7 +32,7 @@ h6
     align-items: center
 
 h1
-    font-size: 4rem
+    font-size: 9vmin
     font-family: 'Kaushan Script', cursive
     margin-bottom: 0px
     background-color: #87F9FF
@@ -42,10 +42,9 @@ h1
     -moz-background-clip: text
     -webkit-text-fill-color: transparent
     -moz-text-fill-color: transparent
-    line-height: 4rem
 
 p.instructions
-    font-size: 1.3rem
+    font-size: 4vmin
     font-weight: 400
     margin-bottom: 8px
 
@@ -53,27 +52,38 @@ p.instructions
     display: grid
     grid-gap: 8px
     grid-template-columns: repeat(2, 1fr)
+    width: 96vw
 
 .content
     header
         text-align: center
         margin-bottom: 2rem
 
-    footer 
-        margin-top: 8px
-        display: flex
-        align-items: center
-        line-height: 20px
-        font-size: .8rem
-        .attribution
-            margin-left: 6px
+footer
+    display: block
+    margin: 8px 0 32px 0
+    align-items: center
+    text-align: center
+    line-height: 20px
+    font-size: .8rem
+    .attribution
+        margin-left: 6px
 
 @media (min-width: 600px)
     h1  
         line-height: 6rem
+        font-size: 4rem
+    p.instructions
+        font-size: 1.3rem
     .card-container 
         grid-gap: .5rem
         grid-template-columns: repeat(3, 1fr)
+
+@media (min-height: 812px) and (min-width: 375px)
+    .content
+        margin: 12px auto 12px
+    .card-container
+        grid-template-columns: repeat(3, 1fr)        
 
 @media (min-height: 375px) and (min-width: 811px)
     .content
@@ -106,3 +116,5 @@ p.instructions
 @media (min-width: 1750px)
     .card-container 
         grid-template-columns: repeat(8, 1fr)
+    .card
+        height: 55vh     

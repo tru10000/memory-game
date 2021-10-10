@@ -1,6 +1,4 @@
 .card
-    height: 90px
-    width: 165px
     margin: 0
     transition: all 0.2s ease-in-out
     line-height: 24px
@@ -12,31 +10,7 @@
 .card.closed:hover
     transform: translateY(-2px)
 
-@media (min-width: 375px)
-    .card
-        height: 100px
-        width: 170px
-
-@media (min-width: 731px)
-    .card
-        height: 90px
-        width: 165px       
-
-@media (min-width: 811px)
-    .card
-        height: 100px
-        width: 170px
-
-@media (min-height: 1024px) and (min-width: 768px)
-    .card
-        height: 105px
-        width: 178.5px
-
-@media (min-height: 1366px) and (min-width: 1024px)
-    .card
-        height: 130px
-        width: 221px
-
+.card,
 .card-inner,
 .card-front,
 .card-back,
@@ -137,3 +111,23 @@
     opacity: 70%
     img
         filter: invert(65%) sepia(29%) saturate(2031%) hue-rotate(83deg) brightness(97%) contrast(84%)
+
+@media (min-height: 1024px) and (min-width: 768px)
+    .card
+        height: 10.5vh
+
+@media (min-width: 811px)
+    .card
+        height: 13vmin     
+
+@media (min-width: 1024px)
+    .card
+        height: 15vh
+
+@media (min-height: 1366px) and (min-width: 1024px)
+    .card
+        height: 11vh
+
+@media (min-width: 1750px)
+    .card
+        height: 18vh     
