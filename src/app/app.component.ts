@@ -71,12 +71,12 @@ export class AppComponent implements OnInit {
   matchedHandler() {
     this.solvedCount++;
     this.setStateSelectedCards(CardState.success);
-    this.setAnimateSelectedCards('animate__zoomOut animate__fast');
+    this.setAnimateSelectedCards('animate__bounceOut animate__slow');
     setTimeout (() => {
       this.setVisibilitySelectedCards(CardVisibility.hidden);
-      this.setAnimateSelectedCards('animate__fadeIn');
+      this.setAnimateSelectedCards('animate__fadeIn animate__fast');
       this.clearSelectedCards();
-    }, 700);
+    }, 1600);
   }
 
   notMatchedHandler() {
