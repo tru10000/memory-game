@@ -1,0 +1,83 @@
+:host
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-size: 14px
+    color: #333
+    box-sizing: border-box
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+a,
+a:visited,
+a:hover
+    color: #1976d2
+    text-decoration: none
+
+a:hover
+    color: #125699
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin: 8px 0
+
+.content
+    display: flex
+    margin: 82px auto 32px
+    padding: 0 16px
+    max-width: 960px
+    flex-direction: column
+    align-items: center
+
+h1
+    font-size: 4rem
+    font-family: 'Kaushan Script', cursive
+    margin-bottom: 0px
+    background-color: #87F9FF
+    background-image: linear-gradient(45deg, #87F9FF, #192972)
+    background-size: 100%
+    -webkit-background-clip: text
+    -moz-background-clip: text
+    -webkit-text-fill-color: transparent
+    -moz-text-fill-color: transparent
+
+p.instructions
+    font-size: 1.3rem
+    font-weight: 400
+    margin-bottom: 8px
+
+.card-container
+    display: grid
+    grid-gap: .5rem
+
+@media (min-width: 600px)
+  .card-container 
+    grid-template-columns: repeat(3, 1fr)
+
+@media (min-width: 900px)
+  .card-container 
+    grid-template-columns: repeat(4, 1fr)
+
+@media (min-width: 1360px)
+  .card-container 
+    grid-template-columns: repeat(6, 1fr)
+
+@media (min-width: 1750px)
+  .card-container 
+    grid-template-columns: repeat(8, 1fr)
+
+.content
+    header
+        text-align: center
+        margin-bottom: 2rem
+
+footer 
+    margin-top: 8px
+    display: flex
+    align-items: center
+    line-height: 20px
+    font-size: .8rem
+    .attribution
+        margin-left: 6px
