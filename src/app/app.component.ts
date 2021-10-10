@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   selectedCards: Card[] = [];
   cards: Card[] = [];
 
-  pairCount: number = sourceCards.length;
+  pairCount: number = 12;
   
   solvedCount: number = 0;
   moveCount: number = 0;
@@ -81,7 +81,6 @@ export class AppComponent implements OnInit {
 
   notMatchedHandler() {
     this.setStateSelectedCards(CardState.nomatch);
-    this.setAnimateSelectedCards('animate__headShake');
     setTimeout (() => {
       this.setStateSelectedCards(CardState.unsolved);
       this.setVisibilitySelectedCards(CardVisibility.closed);
@@ -105,7 +104,7 @@ export class AppComponent implements OnInit {
 
   prepCards() {
     const shuffledSourceCards = this.shuffledArr(sourceCards);
-    const twelveCards = shuffledSourceCards.slice(0, 12);
+    const twelveCards = shuffledSourceCards.slice(0, this.pairCount);
     twelveCards.forEach((sourceCard, pairId) => {
       this.cards.push(this.formatCard(sourceCard, pairId, 'a'));
       this.cards.push(this.formatCard(sourceCard, pairId, 'b'));
