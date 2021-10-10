@@ -104,7 +104,9 @@ export class AppComponent implements OnInit {
   }
 
   prepCards() {
-    sourceCards.forEach((sourceCard, pairId) => {
+    const shuffledSourceCards = this.shuffledArr(sourceCards);
+    const twelveCards = shuffledSourceCards.slice(0, 12);
+    twelveCards.forEach((sourceCard, pairId) => {
       this.cards.push(this.formatCard(sourceCard, pairId, 'a'));
       this.cards.push(this.formatCard(sourceCard, pairId, 'b'));
     });
