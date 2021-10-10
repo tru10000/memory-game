@@ -35,7 +35,7 @@
             ],
             "styles": [
               "src/styles.sass",
-              "src/material-button.sass",
+              "src/material-button.css",
               "node_modules/animate.css/animate.css"
             ],
             "scripts": []

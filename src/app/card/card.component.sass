@@ -1,7 +1,7 @@
 .card
-    height: 100px
-    width: 170px
-    margin: 0 8px 16px
+    height: 90px
+    width: 165px
+    margin: 0
     transition: all 0.2s ease-in-out
     line-height: 24px
     cursor: pointer
@@ -12,6 +12,30 @@
 .card.closed:hover
     transform: translateY(-3px)
 
+@media (min-width: 375px)
+    .card
+        height: 100px
+        width: 170px
+
+@media (min-width: 731px)
+    .card
+        height: 90px
+        width: 165px       
+
+@media (min-width: 811px)
+    .card
+        height: 100px
+        width: 170px
+
+@media (min-height: 1024px) and (min-width: 768px)
+    .card
+        height: 105px
+        width: 178.5px
+
+@media (min-height: 1366px) and (min-width: 1024px)
+    .card
+        height: 130px
+        width: 221px
 
 .card-inner,
 .card-front,

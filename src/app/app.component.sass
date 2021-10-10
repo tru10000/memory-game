@@ -25,7 +25,7 @@ h6
 
 .content
     display: flex
-    margin: 82px auto 32px
+    margin: 12px auto 12px
     padding: 0 16px
     max-width: 960px
     flex-direction: column
@@ -42,6 +42,7 @@ h1
     -moz-background-clip: text
     -webkit-text-fill-color: transparent
     -moz-text-fill-color: transparent
+    line-height: 4rem
 
 p.instructions
     font-size: 1.3rem
@@ -50,34 +51,58 @@ p.instructions
 
 .card-container
     display: grid
-    grid-gap: .5rem
-
-@media (min-width: 600px)
-  .card-container 
-    grid-template-columns: repeat(3, 1fr)
-
-@media (min-width: 900px)
-  .card-container 
-    grid-template-columns: repeat(4, 1fr)
-
-@media (min-width: 1360px)
-  .card-container 
-    grid-template-columns: repeat(6, 1fr)
-
-@media (min-width: 1750px)
-  .card-container 
-    grid-template-columns: repeat(8, 1fr)
+    grid-gap: 8px
+    grid-template-columns: repeat(2, 1fr)
 
 .content
     header
         text-align: center
         margin-bottom: 2rem
 
-footer 
-    margin-top: 8px
-    display: flex
-    align-items: center
-    line-height: 20px
-    font-size: .8rem
-    .attribution
-        margin-left: 6px
+    footer 
+        margin-top: 8px
+        display: flex
+        align-items: center
+        line-height: 20px
+        font-size: .8rem
+        .attribution
+            margin-left: 6px
+
+@media (min-width: 600px)
+    h1  
+        line-height: 6rem
+    .card-container 
+        grid-gap: .5rem
+        grid-template-columns: repeat(3, 1fr)
+
+@media (min-height: 375px) and (min-width: 811px)
+    .content
+        margin: 12px auto 12px
+    .card-container
+        grid-template-columns: repeat(4, 1fr)
+
+@media (min-width: 731px)
+    .card-container 
+        grid-template-columns: repeat(4, 1fr)
+
+@media (min-width: 1024px)
+    .card-container 
+        grid-template-columns: repeat(6, 1fr)
+    .content
+        footer 
+            margin-top: 32px
+
+@media (min-height: 1366px) and (min-width: 1024px)
+    .content
+        margin: 36px auto 36px
+    .card-container
+        grid-gap: 1rem
+        grid-template-columns: repeat(4, 1fr)
+
+@media (min-width: 1360px)
+    .content
+        margin: 82px auto 32px
+
+@media (min-width: 1750px)
+    .card-container 
+        grid-template-columns: repeat(8, 1fr)
